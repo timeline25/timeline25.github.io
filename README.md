@@ -9,7 +9,7 @@ Simply contain the latest PDFs for download, linked from the QR codes on the tim
 
 This website contains the latest PDFs for download, linked from the QR codes on the [timelines](https://github.com/kreier/timeline) itself.
 
-![timeline 5.2](https://raw.githubusercontent.com/kreier/timeline/refs/heads/main/docs/timeline20250221_5.2.png)
+![timeline 5.10](https://raw.githubusercontent.com/timeline25/timeline25.github.io/refs/heads/main/test/timeline20251007_v5.10.png)
 
 | language                                                                |                   print                                     | version | last updated |
 |-------------------------------------------------------------------------|:-----------------------------------------------------------:|:-------:|:------------:|
