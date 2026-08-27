@@ -31,7 +31,7 @@ jobs:
 
       - name: Check whether monitored source folders changed
         id: check
-        uses: ./.github/helper/check-source
+        uses: ./.github/actions/check-source
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}   
 
