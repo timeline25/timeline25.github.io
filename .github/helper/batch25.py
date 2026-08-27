@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 def run_batch_execution():
-    csv_path = '../../timeline/db/supported_languages.csv'
+    csv_path = '../../_source/db/supported_languages.csv'
     script_to_run = '6000.py'
     
     # 1. Check if the files exist before starting
@@ -31,7 +31,7 @@ def run_batch_execution():
     print(f"Found {len(language_codes)} languages to process: {language_codes}")
 
     REPO = Path(__file__).resolve().parents[2]
-    TIMELINE = REPO / "timeline"
+    TIMELINE = REPO / "_source"
     # 5. Execute the commands
     for lang in language_codes:
         print(f"--- Executing: python 6000.py {lang} ---")
