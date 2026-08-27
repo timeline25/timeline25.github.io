@@ -1,79 +1,104 @@
-# .github/workflows/build-pdfs.yml
-name: Build and publish timeline PDFs
+# .github/workflows/deploy.yml
+name: Build and deploy timeline PDFs to Pages
 
 on:
-  # schedule:
-  #   - cron: '17 3 * * *'      # daily check, adjust to taste
+  schedule:
+    - cron: '14 20 * * *'      # daily check at 3:14 in Saigon
   workflow_dispatch: {}        # manual "run now" button, forces a rebuild
+  push:
+    branches: [main]
+    paths-ignore:
+      - '.github/state/fingerprint.txt'   # don't retrigger on our own commit
+      
+permissions:
+  contents: write   # only to update the tiny fingerprint file
+  pages: write
+  id-token: write
 
 concurrency:
-  group: build-pdfs
+  group: pages
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout timeline25.github.io
         uses: actions/checkout@v7
 
-      - name: Get latest commit SHA of kreier/timeline
-        id: upstream
-        run: |
-          SHA=$(git ls-remote https://github.com/kreier/timeline.git refs/heads/main | cut -f1)
-          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
-
-      - name: Decide whether a rebuild is needed
+      - name: Check whether monitored source folders changed
         id: check
-        run: |
-          LAST=""
-          [ -f .source-commit ] && LAST=$(cat .source-commit)
-          if [ "$LAST" = "${{ steps.upstream.outputs.sha }}" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "skip=false" >> "$GITHUB_OUTPUT"
-          fi
+        uses: ./.github/helper/check-source
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}   
+
+      - name: Restore cached PDFs for this fingerprint
+        id: cache
+        uses: actions/cache@v6
+        with:
+          path: pdf-output
+          key: pdfs-${{ steps.check.outputs.fingerprint }}
 
       - name: Sparse-checkout db, images, python from kreier/timeline
-        if: steps.check.outputs.skip == 'false'
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           git clone --depth 1 --filter=blob:none --sparse https://github.com/kreier/timeline.git _source
-          cd _source
-          git sparse-checkout set db images python
+          cd _source && git sparse-checkout set db images python
+          mkdir -p timeline
 
       - name: Set up Python
-        if: steps.check.outputs.skip == 'false'
-        uses: actions/setup-python@v5
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/setup-python@v7
         with:
           python-version: '3.12'
 
       - name: Install dependencies
-        if: steps.check.outputs.skip == 'false'
+        if: steps.cache.outputs.cache-hit != 'true'
         run: pip install fpdf2 uharfbuzz pillow pandas "googletrans==4.0.2" qrcode
 
       - name: Generate all PDFs (digital + print, all languages)
-        if: steps.check.outputs.skip == 'false'
+        if: steps.cache.outputs.cache-hit != 'true'
         working-directory: _source/python
         run: python ../../.github/helper/batch25.py
 
-      - name: Copy PDFs to site root
-        if: steps.check.outputs.skip == 'false'
+      - name: Collect PDFs
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          cp _source/timeline/*.pdf ./
-          echo "${{ steps.upstream.outputs.sha }}" > .source-commit
+          mkdir -p pdf-output
+          cp _source/timeline/*.pdf pdf-output/
           rm -rf _source
 
-      - name: Commit and push
-        if: steps.check.outputs.skip == 'false'
+      - name: Build Jekyll site (renders README.md as before)
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Fix ownership of Jekyll output
+        run: sudo chown -R "$(id -u):$(id -g)" _site
+
+      - name: Add generated PDFs to the site output
+        run: cp pdf-output/*.pdf _site/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
+
+      - name: Record new fingerprint
+        if: steps.check.outputs.changed == 'true'
         run: |
+          mkdir -p .github/state
+          echo "${{ steps.check.outputs.fingerprint }}" > .github/state/fingerprint.txt
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "timeline_*.pdf" .source-commit
-          if git diff --cached --quiet; then
-            echo "No PDF changes to commit."
-          else
-            git commit -m "Update generated PDFs from kreier/timeline@${{ steps.upstream.outputs.sha }}"
-            git push
-          fi
+          git add .github/state/fingerprint.txt
+          git diff --cached --quiet || git commit -m "Record new source fingerprint ${{ steps.check.outputs.fingerprint }}"
+          git push
