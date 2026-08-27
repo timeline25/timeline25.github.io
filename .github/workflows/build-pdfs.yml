@@ -1,0 +1,79 @@
+# .github/workflows/build-pdfs.yml
+name: Build and publish timeline PDFs
+
+on:
+  # schedule:
+  #   - cron: '17 3 * * *'      # daily check, adjust to taste
+  workflow_dispatch: {}        # manual "run now" button, forces a rebuild
+
+concurrency:
+  group: build-pdfs
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout timeline25.github.io
+        uses: actions/checkout@v4
+
+      - name: Get latest commit SHA of kreier/timeline
+        id: upstream
+        run: |
+          SHA=$(git ls-remote https://github.com/kreier/timeline.git refs/heads/main | cut -f1)
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+
+      - name: Decide whether a rebuild is needed
+        id: check
+        run: |
+          LAST=""
+          [ -f .source-commit ] && LAST=$(cat .source-commit)
+          if [ "$LAST" = "${{ steps.upstream.outputs.sha }}" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Sparse-checkout db, images, python from kreier/timeline
+        if: steps.check.outputs.skip == 'false'
+        run: |
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/kreier/timeline.git _source
+          cd _source
+          git sparse-checkout set db images python
+
+      - name: Set up Python
+        if: steps.check.outputs.skip == 'false'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        if: steps.check.outputs.skip == 'false'
+        run: pip install fpdf2 uharfbuzz pillow pandas "googletrans==4.0.2" qrcode
+
+      - name: Generate all PDFs (digital + print, all languages)
+        if: steps.check.outputs.skip == 'false'
+        working-directory: _source/python
+        run: python ../../.github/helper/batch25.py
+
+      - name: Copy PDFs to site root
+        if: steps.check.outputs.skip == 'false'
+        run: |
+          cp _source/timeline/*.pdf ./
+          echo "${{ steps.upstream.outputs.sha }}" > .source-commit
+          rm -rf _source
+
+      - name: Commit and push
+        if: steps.check.outputs.skip == 'false'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "timeline_*.pdf" .source-commit
+          if git diff --cached --quiet; then
+            echo "No PDF changes to commit."
+          else
+            git commit -m "Update generated PDFs from kreier/timeline@${{ steps.upstream.outputs.sha }}"
+            git push
+          fi
