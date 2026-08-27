@@ -64,13 +64,6 @@ jobs:
         working-directory: _source/python
         run: python ../../.github/helper/batch25.py
 
-      - name: Collect PDFs
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          mkdir -p pdf-output
-          cp _source/timeline/*.pdf pdf-output/
-          rm -rf _source
-
       - name: Build Jekyll site (renders README.md as before)
         uses: actions/jekyll-build-pages@v1
         with:
@@ -81,7 +74,10 @@ jobs:
         run: sudo chown -R "$(id -u):$(id -g)" _site
 
       - name: Add generated PDFs to the site output
-        run: cp pdf-output/*.pdf _site/
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          cp _source/timeline/*.pdf _site/
+          rm -rf _source
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
