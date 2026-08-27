@@ -30,9 +30,6 @@ def run_batch_execution():
 
     print(f"Found {len(language_codes)} languages to process: {language_codes}")
 
-    REPO = Path(__file__).resolve().parents[2]
-    # TIMELINE = REPO / "_source/python"
-    TIMELINE = "_source/python"
     # 5. Execute the commands
     for lang in language_codes:
         print(f"--- Executing: python 6000.py {lang} ---")
@@ -40,8 +37,7 @@ def run_batch_execution():
         try:
             # shell=False is safer; we pass the command as a list
             subprocess.run(
-              ["python", "6000.py", lang, '_fiverr1 2025'], 
-              cwd=TIMELINE, 
+              ["python", "6000.py", lang, '_fiverr2 2025'], 
               check=True
             )
         except subprocess.CalledProcessError as e:
