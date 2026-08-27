@@ -37,7 +37,7 @@ def run_batch_execution():
         try:
             # shell=False is safer; we pass the command as a list
             subprocess.run(
-              ["python", "6000.py", lang, '_fiverr2 2025'], 
+              ["python", "6000.py", lang, '_fiverr2', '2025'], 
               check=True
             )
         except subprocess.CalledProcessError as e:
