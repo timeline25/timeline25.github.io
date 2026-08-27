@@ -1,0 +1,65 @@
+name: 'Check kreier/timeline source folders'
+description: >
+  Fingerprints db/, images/, python/ (top-level files only), and python/fonts/
+  in kreier/timeline, and compares it against the fingerprint recorded in
+  this repository's .github/state/fingerprint.txt.
+inputs:
+  github-token:
+    description: 'Token used to authenticate against the GitHub API (avoids the 60 req/hr unauthenticated limit)'
+    required: true
+outputs:
+  changed:
+    description: "'true' if the monitored folders changed since the last recorded build"
+    value: ${{ steps.compare.outputs.changed }}
+  fingerprint:
+    description: "The freshly computed fingerprint"
+    value: ${{ steps.fingerprint.outputs.fingerprint }}
+runs:
+  using: "composite"
+  steps:
+    - name: Compute fingerprint of monitored source folders
+      id: fingerprint
+      shell: bash
+      run: |
+        set -euo pipefail
+        TREE=$(curl -sf \
+          -H "Authorization: Bearer ${{ inputs.github-token }}" \
+          -H "Accept: application/vnd.github+json" \
+          "https://api.github.com/repos/kreier/timeline/git/trees/main?recursive=1")
+
+        if ! echo "$TREE" | jq -e '.tree' > /dev/null 2>&1; then
+          echo "::error::GitHub API did not return a tree. Response was:"
+          echo "$TREE"
+          exit 1
+        fi
+
+        TRUNCATED=$(echo "$TREE" | jq -r '.truncated')
+        if [ "$TRUNCATED" = "true" ]; then
+          echo "::warning::Tree response was truncated by the GitHub API — fingerprint may miss some files."
+        fi
+
+        FP=$(echo "$TREE" | jq -r '
+          .tree[]
+          | select(.type=="blob")
+          | select(
+              (.path | test("^db/[^/]+$")) or
+              (.path | test("^images/[^/]+$")) or
+              (.path | test("^python/[^/]+$")) or
+              (.path | test("^python/fonts/[^/]+$"))
+            )
+          | "\(.path) \(.sha)"
+        ' | sort | sha256sum | cut -d" " -f1)
+        echo "fingerprint=$FP" >> "$GITHUB_OUTPUT"
+
+    - name: Compare against last recorded fingerprint
+      id: compare
+      shell: bash
+      run: |
+        STATE_FILE=".github/state/fingerprint.txt"
+        LAST=""
+        [ -f "$STATE_FILE" ] && LAST=$(cat "$STATE_FILE")
+        if [ "$LAST" = "${{ steps.fingerprint.outputs.fingerprint }}" ]; then
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+        else
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+        fi
