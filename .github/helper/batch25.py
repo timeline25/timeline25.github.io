@@ -31,7 +31,8 @@ def run_batch_execution():
     print(f"Found {len(language_codes)} languages to process: {language_codes}")
 
     REPO = Path(__file__).resolve().parents[2]
-    TIMELINE = REPO / "_source"
+    # TIMELINE = REPO / "_source/python"
+    TIMELINE = "_source/python"
     # 5. Execute the commands
     for lang in language_codes:
         print(f"--- Executing: python 6000.py {lang} ---")

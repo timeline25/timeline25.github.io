@@ -17,7 +17,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout timeline25.github.io
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Get latest commit SHA of kreier/timeline
         id: upstream
