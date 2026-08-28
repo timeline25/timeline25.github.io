@@ -11,6 +11,8 @@ This website contains the latest PDFs for download, linked from the QR codes on 
 
 ![timeline 5.10](https://raw.githubusercontent.com/timeline25/timeline25.github.io/refs/heads/main/archive/timeline20251007_v5.10.png)
 
+<!-- start marker table translations -->
+
 | language                                                                |                   print                                     | version | last updated |
 |-------------------------------------------------------------------------|:-----------------------------------------------------------:|:-------:|:------------:|
 | [English](https://timeline25.github.io/timeline_en.pdf)                 | [link](https://timeline25.github.io/timeline_en_print.pdf)  |   6.06  |  2026-06-30  |
@@ -18,6 +20,8 @@ This website contains the latest PDFs for download, linked from the QR codes on 
 | [German (Deutsch)](https://timeline25.github.io/timeline_de.pdf)        | [link](https://timeline25.github.io/timeline_de_print.pdf)  |   6.06  |  2026-06-30  |
 | [Laotian (ລາວ)](https://timeline25.github.io/timeline_lo.pdf)           | [link](https://timeline25.github.io/timeline_lo_print.pdf)  |   6.06  |  2026-06-30  |
 | [Vietnamese (Tiếng Việt)](https://timeline25.github.io/timeline_vi.pdf) | [link](https://timeline25.github.io/timeline_vi_print.pdf)  |   6.06  |  2026-06-30  |
+
+<!-- end marker table translations -->
 
 The print version has additional 5cm left and right for the print shop. It's easier to connect the end roll covers to the timeline. The standard dimensions for the print version are 1308x210mm. But it can be scaled to any size with a ratio 6.228:1. 
 
