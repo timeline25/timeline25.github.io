@@ -27,7 +27,7 @@ This website contains the latest PDFs for download, linked from the QR codes on 
 | [Fijian (Vosa Vaka-Viti)](https://timeline25.github.io/timeline_fj.pdf) | [link](https://timeline25.github.io/timeline_fj_print.pdf) |  6.08   |  2026-08-26  |
 | [Finnish (Suomi)](https://timeline25.github.io/timeline_fi.pdf) | [link](https://timeline25.github.io/timeline_fi_print.pdf) |  6.08   |  2026-08-26  |
 | [French (Français)](https://timeline25.github.io/timeline_fr.pdf) | [link](https://timeline25.github.io/timeline_fr_print.pdf) |  6.08   |  2026-08-26  |
-| [German (Deutsch)](https://timeline25.github.io/timeline_de.pdf) | [link](https://timeline25.github.io/timeline_de_print.pdf) |  6.08   |  2026-08-26  |
+| [German (Deutsch)](https://timeline25.github.io/timeline_de.pdf) | [link](https://timeline25.github.io/timeline_de_print.pdf) |  6.08   |  2026-08-30  |
 | [Greek (Ελληνικά)](https://timeline25.github.io/timeline_el.pdf) | [link](https://timeline25.github.io/timeline_el_print.pdf) |  6.08   |  2026-08-26  |
 | [Hebrew (עִבְרִית)](https://timeline25.github.io/timeline_he.pdf) | [link](https://timeline25.github.io/timeline_he_print.pdf) |  6.08   |  2026-08-26  |
 | [Hindi (हिन्दी)](https://timeline25.github.io/timeline_hi.pdf) | [link](https://timeline25.github.io/timeline_hi_print.pdf) |  6.08   |  2026-08-26  |
