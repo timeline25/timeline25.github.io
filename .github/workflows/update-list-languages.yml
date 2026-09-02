@@ -1,6 +1,8 @@
 name: Update language list
 
 on:
+  repository_dispatch:
+    types: [timeline-updated]
   schedule:
     - cron: '37 6 * * 1'   # every Monday at 06:37 UTC
   workflow_dispatch: {}
