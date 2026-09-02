@@ -1,6 +1,6 @@
 | language | print | version | last updated |
 |----------|:-----:|:-------:|:------------:|
-| [Arabic (العربية)](https://timeline25.github.io/timeline_ar.pdf) | [link](https://timeline25.github.io/timeline_ar_print.pdf) |  6.08   |  2026-08-26  |
+| [Arabic (العربية)](https://timeline25.github.io/timeline_ar.pdf) | [link](https://timeline25.github.io/timeline_ar_print.pdf) |  6.08   |  2026-09-03  |
 | [Armenian (Հայերեն)](https://timeline25.github.io/timeline_hy.pdf) | [link](https://timeline25.github.io/timeline_hy_print.pdf) |  6.08   |  2026-08-26  |
 | [Belarusian (беларуская)](https://timeline25.github.io/timeline_be.pdf) | [link](https://timeline25.github.io/timeline_be_print.pdf) |  6.08   |  2026-09-01  |
 | [Cebuano (Bisayâ)](https://timeline25.github.io/timeline_ceb.pdf) | [link](https://timeline25.github.io/timeline_ceb_print.pdf) |  6.08   |  2026-08-26  |
