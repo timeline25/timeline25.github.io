@@ -32,11 +32,11 @@
 | [Mongolian (монгол)](https://timeline25.github.io/timeline_mn.pdf) | [link](https://timeline25.github.io/timeline_mn_print.pdf) |  6.08   |  2026-08-26  |
 | [Norwegian (Norsk)](https://timeline25.github.io/timeline_no.pdf) | [link](https://timeline25.github.io/timeline_no_print.pdf) |  6.08   |  2026-08-26  |
 | [Persian or Farsi (فارسی)](https://timeline25.github.io/timeline_fa.pdf) | [link](https://timeline25.github.io/timeline_fa_print.pdf) |  6.08   |  2026-08-26  |
-| [Portugese (Português)](https://timeline25.github.io/timeline_pt.pdf) | [link](https://timeline25.github.io/timeline_pt_print.pdf) |  6.08   |  2026-08-26  |
+| [Portuguese (Português)](https://timeline25.github.io/timeline_pt.pdf) | [link](https://timeline25.github.io/timeline_pt_print.pdf) |  6.08   |  2026-08-26  |
 | [Punjabi (ਪੰਜਾਬੀ)](https://timeline25.github.io/timeline_pa.pdf) | [link](https://timeline25.github.io/timeline_pa_print.pdf) |  6.08   |  2026-08-26  |
 | [Russian (Русский)](https://timeline25.github.io/timeline_ru.pdf) | [link](https://timeline25.github.io/timeline_ru_print.pdf) |  6.08   |  2026-08-26  |
 | [Sinhala (සිංහල)](https://timeline25.github.io/timeline_si.pdf) | [link](https://timeline25.github.io/timeline_si_print.pdf) |  6.08   |  2026-08-26  |
-| [Spanish (Español)](https://timeline25.github.io/timeline_es.pdf) | [link](https://timeline25.github.io/timeline_es_print.pdf) |  6.08   |  2026-08-26  |
+| [Spanish (Español)](https://timeline25.github.io/timeline_es.pdf) | [link](https://timeline25.github.io/timeline_es_print.pdf) |  6.08   |  2026-09-03  |
 | [Swahili (Kiswahili)](https://timeline25.github.io/timeline_sw.pdf) | [link](https://timeline25.github.io/timeline_sw_print.pdf) |  6.08   |  2026-08-26  |
 | [Tagalog (Filipino)](https://timeline25.github.io/timeline_tl.pdf) | [link](https://timeline25.github.io/timeline_tl_print.pdf) |  6.08   |  2026-08-26  |
 | [Thai (ภาษาไทย)](https://timeline25.github.io/timeline_th.pdf) | [link](https://timeline25.github.io/timeline_th_print.pdf) |  6.08   |  2026-08-26  |
