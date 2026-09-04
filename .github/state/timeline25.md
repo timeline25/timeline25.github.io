@@ -3,7 +3,7 @@
 | [Arabic (العربية)](https://timeline25.github.io/timeline_ar.pdf) | [link](https://timeline25.github.io/timeline_ar_print.pdf) |  6.08   |  2026-09-03  |
 | [Armenian (Հայերեն)](https://timeline25.github.io/timeline_hy.pdf) | [link](https://timeline25.github.io/timeline_hy_print.pdf) |  6.08   |  2026-08-26  |
 | [Belarusian (беларуская)](https://timeline25.github.io/timeline_be.pdf) | [link](https://timeline25.github.io/timeline_be_print.pdf) |  6.08   |  2026-09-03  |
-| [Bengali (বাংলা)](https://timeline25.github.io/timeline_bn.pdf) | [link](https://timeline25.github.io/timeline_bn_print.pdf) |  6.08   |  2026-09-04  |
+| [Bengali (বাংলা)](https://timeline25.github.io/timeline_bn.pdf) | [link](https://timeline25.github.io/timeline_bn_print.pdf) |    —    |      —       |
 | [Bulgarian (български)](https://timeline25.github.io/timeline_bg.pdf) | [link](https://timeline25.github.io/timeline_bg_print.pdf) |  6.08   |  2026-09-04  |
 | [Cebuano (Bisayâ)](https://timeline25.github.io/timeline_ceb.pdf) | [link](https://timeline25.github.io/timeline_ceb_print.pdf) |  6.08   |  2026-08-26  |
 | [Chinese Cantonese (Simplified) [中文简体（广东话)]](https://timeline25.github.io/timeline_yue.pdf) | [link](https://timeline25.github.io/timeline_yue_print.pdf) |  6.08   |  2026-08-26  |
