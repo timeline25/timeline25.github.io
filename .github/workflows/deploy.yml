@@ -58,7 +58,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: pip install fpdf2 uharfbuzz pillow pandas "googletrans==4.0.2" qrcode
+        run: pip install fpdf2 uharfbuzz pillow pandas "googletrans==4.0.2" qrcode httpx_curl_cffi
 
       - name: Generate all PDFs (digital + print, all languages)
         if: steps.cache.outputs.cache-hit != 'true'
