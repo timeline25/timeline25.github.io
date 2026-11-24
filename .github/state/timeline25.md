@@ -13,7 +13,7 @@
 | [Fijian (Vosa Vaka-Viti)](https://timeline25.github.io/timeline_fj.pdf) | [link](https://timeline25.github.io/timeline_fj_print.pdf) |  6.08   |  2026-08-26  |
 | [Finnish (Suomi)](https://timeline25.github.io/timeline_fi.pdf) | [link](https://timeline25.github.io/timeline_fi_print.pdf) |  6.08   |  2026-08-26  |
 | [French (Français)](https://timeline25.github.io/timeline_fr.pdf) | [link](https://timeline25.github.io/timeline_fr_print.pdf) |  6.08   |  2026-08-26  |
-| [German (Deutsch)](https://timeline25.github.io/timeline_de.pdf) | [link](https://timeline25.github.io/timeline_de_print.pdf) |  6.08   |  2026-08-30  |
+| [German (Deutsch)](https://timeline25.github.io/timeline_de.pdf) | [link](https://timeline25.github.io/timeline_de_print.pdf) |  6.11   |  2026-11-24  |
 | [Greek (Ελληνικά)](https://timeline25.github.io/timeline_el.pdf) | [link](https://timeline25.github.io/timeline_el_print.pdf) |  6.08   |  2026-09-01  |
 | [Hausa](https://timeline25.github.io/timeline_ha.pdf) | [link](https://timeline25.github.io/timeline_ha_print.pdf) |  6.08   |  2026-09-04  |
 | [Hebrew (עִבְרִית)](https://timeline25.github.io/timeline_he.pdf) | [link](https://timeline25.github.io/timeline_he_print.pdf) |  6.08   |  2026-08-26  |
