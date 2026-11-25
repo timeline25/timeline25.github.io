@@ -25,33 +25,33 @@
 | [Italian (Italiano)](https://timeline25.github.io/timeline_it.pdf) | [link](https://timeline25.github.io/timeline_it_print.pdf) |  6.11   |  2026-11-24  |
 | [Japanese (日本語)](https://timeline25.github.io/timeline_ja.pdf) | [link](https://timeline25.github.io/timeline_ja_print.pdf) |  6.11   |  2026-11-24  |
 | [Javanese (Jawa)](https://timeline25.github.io/timeline_jv.pdf) | [link](https://timeline25.github.io/timeline_jv_print.pdf) |  6.11   |  2026-11-24  |
-| [Kankana-ey](https://timeline25.github.io/timeline_kne.pdf) | [link](https://timeline25.github.io/timeline_kne_print.pdf) |  6.11   |  2026-11-23  |
-| [Kannada (ಕನ್ನಡ)](https://timeline25.github.io/timeline_kn.pdf) | [link](https://timeline25.github.io/timeline_kn_print.pdf) |  6.11   |  2026-09-04  |
+| [Kankana-ey](https://timeline25.github.io/timeline_kne.pdf) | [link](https://timeline25.github.io/timeline_kne_print.pdf) |  6.11   |  2026-11-24  |
+| [Kannada (ಕನ್ನಡ)](https://timeline25.github.io/timeline_kn.pdf) | [link](https://timeline25.github.io/timeline_kn_print.pdf) |  6.11   |  2026-11-24  |
 | [Khmer (ខ្មែរ) with arabic numerals](https://timeline25.github.io/timeline_kman.pdf) | [link](https://timeline25.github.io/timeline_kman_print.pdf) |  6.11   |  2026-08-26  |
-| [Khmer (ខ្មែរ)](https://timeline25.github.io/timeline_km.pdf) | [link](https://timeline25.github.io/timeline_km_print.pdf) |  6.11   |  2026-11-23  |
-| [Kikongo](https://timeline25.github.io/timeline_kg.pdf) | [link](https://timeline25.github.io/timeline_kg_print.pdf) |  6.11   |  2026-08-26  |
-| [Korean (한국인)](https://timeline25.github.io/timeline_ko.pdf) | [link](https://timeline25.github.io/timeline_ko_print.pdf) |  6.11   |  2026-08-26  |
-| [Laotian (ລາວ)](https://timeline25.github.io/timeline_lo.pdf) | [link](https://timeline25.github.io/timeline_lo_print.pdf) |  6.11   |  2026-11-17  |
-| [Malay (Bahasa Melayu)](https://timeline25.github.io/timeline_ms.pdf) | [link](https://timeline25.github.io/timeline_ms_print.pdf) |  6.11   |  2026-08-26  |
-| [Malayalam (മലയാളം)](https://timeline25.github.io/timeline_ml.pdf) | [link](https://timeline25.github.io/timeline_ml_print.pdf) |  6.11   |  2026-09-04  |
-| [Marathi (मराठी)](https://timeline25.github.io/timeline_mr.pdf) | [link](https://timeline25.github.io/timeline_mr_print.pdf) |  6.11   |  2026-09-04  |
-| [Mongolian (монгол)](https://timeline25.github.io/timeline_mn.pdf) | [link](https://timeline25.github.io/timeline_mn_print.pdf) |  6.11   |  2026-08-26  |
-| [Myanmar (မြန်မာ)](https://timeline25.github.io/timeline_my.pdf) | [link](https://timeline25.github.io/timeline_my_print.pdf) |  6.11   |  2026-09-04  |
-| [Norwegian (Norsk)](https://timeline25.github.io/timeline_no.pdf) | [link](https://timeline25.github.io/timeline_no_print.pdf) |  6.11   |  2026-08-26  |
-| [Persian or Farsi (فارسی)](https://timeline25.github.io/timeline_fa.pdf) | [link](https://timeline25.github.io/timeline_fa_print.pdf) |  6.11   |  2026-08-26  |
+| [Khmer (ខ្មែរ)](https://timeline25.github.io/timeline_km.pdf) | [link](https://timeline25.github.io/timeline_km_print.pdf) |  6.11   |  2026-11-24  |
+| [Kikongo](https://timeline25.github.io/timeline_kg.pdf) | [link](https://timeline25.github.io/timeline_kg_print.pdf) |  6.11   |  2026-11-24  |
+| [Korean (한국인)](https://timeline25.github.io/timeline_ko.pdf) | [link](https://timeline25.github.io/timeline_ko_print.pdf) |  6.11   |  2026-11-24  |
+| [Laotian (ລາວ)](https://timeline25.github.io/timeline_lo.pdf) | [link](https://timeline25.github.io/timeline_lo_print.pdf) |  6.11   |  2026-11-24  |
+| [Malay (Bahasa Melayu)](https://timeline25.github.io/timeline_ms.pdf) | [link](https://timeline25.github.io/timeline_ms_print.pdf) |  6.11   |  2026-11-24  |
+| [Malayalam (മലയാളം)](https://timeline25.github.io/timeline_ml.pdf) | [link](https://timeline25.github.io/timeline_ml_print.pdf) |  6.11   |  2026-11-24  |
+| [Marathi (मराठी)](https://timeline25.github.io/timeline_mr.pdf) | [link](https://timeline25.github.io/timeline_mr_print.pdf) |  6.11   |  2026-11-24  |
+| [Mongolian (монгол)](https://timeline25.github.io/timeline_mn.pdf) | [link](https://timeline25.github.io/timeline_mn_print.pdf) |  6.11   |  2026-11-24  |
+| [Myanmar (မြန်မာ)](https://timeline25.github.io/timeline_my.pdf) | [link](https://timeline25.github.io/timeline_my_print.pdf) |  6.11   |  2026-11-24  |
+| [Norwegian (Norsk)](https://timeline25.github.io/timeline_no.pdf) | [link](https://timeline25.github.io/timeline_no_print.pdf) |  6.11   |  2026-11-24  |
+| [Persian or Farsi (فارسی)](https://timeline25.github.io/timeline_fa.pdf) | [link](https://timeline25.github.io/timeline_fa_print.pdf) |  6.11   |  2026-11-24  |
 | [Polish (polski)](https://timeline25.github.io/timeline_pl.pdf) | [link](https://timeline25.github.io/timeline_pl_print.pdf) |  6.11   |  2026-09-04  |
-| [Portuguese (Português)](https://timeline25.github.io/timeline_pt.pdf) | [link](https://timeline25.github.io/timeline_pt_print.pdf) |  6.11   |  2026-08-26  |
-| [Punjabi (ਪੰਜਾਬੀ)](https://timeline25.github.io/timeline_pa.pdf) | [link](https://timeline25.github.io/timeline_pa_print.pdf) |  6.11   |  2026-08-26  |
-| [Russian (Русский)](https://timeline25.github.io/timeline_ru.pdf) | [link](https://timeline25.github.io/timeline_ru_print.pdf) |  6.11   |  2026-08-26  |
-| [Sinhala (සිංහල)](https://timeline25.github.io/timeline_si.pdf) | [link](https://timeline25.github.io/timeline_si_print.pdf) |  6.11   |  2026-08-26  |
-| [Spanish (Español)](https://timeline25.github.io/timeline_es.pdf) | [link](https://timeline25.github.io/timeline_es_print.pdf) |  6.11   |  2026-09-03  |
-| [Swahili (Kiswahili)](https://timeline25.github.io/timeline_sw.pdf) | [link](https://timeline25.github.io/timeline_sw_print.pdf) |  6.11   |  2026-08-26  |
-| [Swedish (Svenska)](https://timeline25.github.io/timeline_sv.pdf) | [link](https://timeline25.github.io/timeline_sv_print.pdf) |  6.11   |  2026-09-04  |
+| [Portuguese (Português)](https://timeline25.github.io/timeline_pt.pdf) | [link](https://timeline25.github.io/timeline_pt_print.pdf) |  6.11   |  2026-11-24  |
+| [Punjabi (ਪੰਜਾਬੀ)](https://timeline25.github.io/timeline_pa.pdf) | [link](https://timeline25.github.io/timeline_pa_print.pdf) |  6.11   |  2026-11-24  |
+| [Russian (Русский)](https://timeline25.github.io/timeline_ru.pdf) | [link](https://timeline25.github.io/timeline_ru_print.pdf) |  6.11   |  2026-11-24  |
+| [Sinhala (සිංහල)](https://timeline25.github.io/timeline_si.pdf) | [link](https://timeline25.github.io/timeline_si_print.pdf) |  6.11   |  2026-11-24  |
+| [Spanish (Español)](https://timeline25.github.io/timeline_es.pdf) | [link](https://timeline25.github.io/timeline_es_print.pdf) |  6.11   |  2026-11-24  |
+| [Swahili (Kiswahili)](https://timeline25.github.io/timeline_sw.pdf) | [link](https://timeline25.github.io/timeline_sw_print.pdf) |  6.11   |  2026-11-24  |
+| [Swedish (Svenska)](https://timeline25.github.io/timeline_sv.pdf) | [link](https://timeline25.github.io/timeline_sv_print.pdf) |  6.11   |  2026-11-24  |
 | [Tagalog (Filipino)](https://timeline25.github.io/timeline_tl.pdf) | [link](https://timeline25.github.io/timeline_tl_print.pdf) |  6.11   |  2026-11-24  |
-| [Tamil (தமிழ்)](https://timeline25.github.io/timeline_ta.pdf) | [link](https://timeline25.github.io/timeline_ta_print.pdf) |  6.11   |  2026-09-04  |
-| [Telugu (తెలుగు)](https://timeline25.github.io/timeline_te.pdf) | [link](https://timeline25.github.io/timeline_te_print.pdf) |  6.11   |  2026-09-04  |
-| [Thai (ภาษาไทย)](https://timeline25.github.io/timeline_th.pdf) | [link](https://timeline25.github.io/timeline_th_print.pdf) |  6.11   |  2026-08-26  |
-| [Turkish (Türkçe)](https://timeline25.github.io/timeline_tr.pdf) | [link](https://timeline25.github.io/timeline_tr_print.pdf) |  6.11   |  2026-08-26  |
+| [Tamil (தமிழ்)](https://timeline25.github.io/timeline_ta.pdf) | [link](https://timeline25.github.io/timeline_ta_print.pdf) |  6.11   |  2026-11-24  |
+| [Telugu (తెలుగు)](https://timeline25.github.io/timeline_te.pdf) | [link](https://timeline25.github.io/timeline_te_print.pdf) |  6.11   |  2026-11-24  |
+| [Thai (ภาษาไทย)](https://timeline25.github.io/timeline_th.pdf) | [link](https://timeline25.github.io/timeline_th_print.pdf) |  6.11   |  2026-11-24  |
+| [Turkish (Türkçe)](https://timeline25.github.io/timeline_tr.pdf) | [link](https://timeline25.github.io/timeline_tr_print.pdf) |  6.11   |  2026-11-24  |
 | [Ukrainian (українська)](https://timeline25.github.io/timeline_uk.pdf) | [link](https://timeline25.github.io/timeline_uk_print.pdf) |  6.11   |  2026-11-24  |
-| [Urdu (اُردُو)](https://timeline25.github.io/timeline_ur.pdf) | [link](https://timeline25.github.io/timeline_ur_print.pdf) |  6.11   |  2026-08-26  |
+| [Urdu (اُردُو)](https://timeline25.github.io/timeline_ur.pdf) | [link](https://timeline25.github.io/timeline_ur_print.pdf) |  6.11   |  2026-11-24  |
 | [Vietnamese (Tiếng Việt)](https://timeline25.github.io/timeline_vi.pdf) | [link](https://timeline25.github.io/timeline_vi_print.pdf) |  6.11   |  2026-09-02  |
