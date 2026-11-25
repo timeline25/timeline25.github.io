@@ -12,7 +12,7 @@ on:
       - '.github/state/timeline25.md'     # updated by update-list-languages workflow
 
 permissions:
-  contents: write   # only to update the tiny fingerprint file
+  contents: write   # only to update the tiny fingerprint file after a successful deploy
   pages: write
   id-token: write
 
@@ -21,11 +21,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      changed: ${{ steps.check.outputs.changed }}
+      fingerprint: ${{ steps.check.outputs.fingerprint }}
+      cache_hit: ${{ steps.cache.outputs.cache-hit }}
     steps:
       - name: Checkout timeline25.github.io
         uses: actions/checkout@v7
@@ -34,13 +35,13 @@ jobs:
         id: check
         uses: ./.github/actions/check-source
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}   
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Restore cached PDFs for this fingerprint
         id: cache
         uses: actions/cache@v6
         with:
-          path: pdf-output
+          path: _source/timeline
           key: pdfs-${{ steps.check.outputs.fingerprint }}
 
       - name: Sparse-checkout db, images, python from kreier/timeline
@@ -74,28 +75,48 @@ jobs:
       - name: Fix ownership of Jekyll output
         run: sudo chown -R "$(id -u):$(id -g)" _site
 
-      - name: Add generated PDFs to the site output
-        if: steps.cache.outputs.cache-hit != 'true'
+      - name: Add generated or cached PDFs to the site output
         run: |
-          cp _source/timeline/*.pdf _site/
+          mkdir -p _site
+          if compgen -G "_source/timeline/*.pdf" > /dev/null; then
+            cp _source/timeline/*.pdf _site/
+          fi
           rm -rf _source
+
+      - name: Verify _site is non-empty before upload
+        run: |
+          test -d _site
+          count=$(find _site -type f | wc -l)
+          echo "Files in _site: $count"
+          test "$count" -gt 0
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
 
+      - name: Checkout timeline25.github.io for fingerprint update
+        if: needs.build.outputs.changed == 'true'
+        uses: actions/checkout@v7
+
       - name: Record new fingerprint
-        if: steps.check.outputs.changed == 'true'
+        if: needs.build.outputs.changed == 'true'
         run: |
           mkdir -p .github/state
-          echo "${{ steps.check.outputs.fingerprint }}" > .github/state/fingerprint.txt
+          echo "${{ needs.build.outputs.fingerprint }}" > .github/state/fingerprint.txt
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .github/state/fingerprint.txt
-          git diff --cached --quiet || git commit -m "Record new source fingerprint ${{ steps.check.outputs.fingerprint }}"
+          git diff --cached --quiet || git commit -m "Record new source fingerprint ${{ needs.build.outputs.fingerprint }}"
           git push
